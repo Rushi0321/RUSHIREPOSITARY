@@ -1,0 +1,100 @@
+1)a=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+
+def countlines(b):
+    c=b.readlines()
+    print(len(c))
+a.seek(0)
+
+def count_chars(e):
+    f=e.readlines()
+    print(len(f[0]+f[1]+f[2]+f[3]))
+
+def test():
+    countlines()
+    a.seek(0)
+    count_chars()
+
+
+2)a=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+
+  def countlines(b):
+    c=b.readlines()
+    print(len(c))
+a.seek(0)
+
+ def count_chars(e):
+    f=e.readlines()
+    print(len(f[0]+f[1]+f[2]+f[3]))
+ 
+from ex7 import countlines,count_chars
+countlines(a)
+a.seek(0)
+count_chars(a)
+
+3)a=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+
+def countlines(c):
+    c=c.readlines()
+    print(len(c))
+a.seek(0)
+
+def count_chars(f):
+    f=f.readlines()
+    print(len(f[0]+f[1]+f[2]+f[3]))
+
+def test():
+    countlines()
+    a.seek(0)
+    count_chars()
+
+
+if(__name__=="__main__"):
+    test()
+
+4)a=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+
+def countlines(c):
+    c=c.readlines()
+    print(len(c))
+a.seek(0)
+
+def count_chars(f):
+    f=f.readlines()
+    print(len(f[0]+f[1]+f[2]+f[3]))
+
+def test():
+    countlines()
+    a.seek(0)
+    count_chars()
+
+
+import ex7 as e
+e.countlines()
+
+print(dir())
+
+5)a=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+
+def countlines(c):
+    c=c.readlines()
+    print(len(c))
+a.seek(0)
+
+def count_chars(f):
+    f=f.readlines()
+    print(len(f[0]+f[1]+f[2]+f[3]))
+
+def test():
+    countlines()
+    a.seek(0)
+    count_chars()
+
+import package.mypkg.ex7 as p
+
+p.count_chars()
+p.countlines()
+
+6)import mypkg.ex7
+mypkg.ex7.test()
+import importlib
+importlib.reload(mypkg.ex7)

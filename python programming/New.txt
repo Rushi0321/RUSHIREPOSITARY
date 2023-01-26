@@ -1,0 +1,166 @@
+"hello"
+"myself Rushikesh salunkhe"
+"I am cdac PGDAI studemnt"
+"2022 batch"
+ 
+
+create table CLIENT_MASTER(CLIENTNO varchar2(20) CHECK (CLIENTNO LIKE'C%'),NAME varchar2(20) NOT NULL,CITY varchar2(20),PINCODE number,STATE varchar2(20),BALDUE number,primary key(CLIENTNO));
+  
+
+
+insert into CLIENT_MASTER(CLIENTNO,NAME,CITY,PINCODE,STATE,BALDUE) values('C001','Ivan Bayross','Mumbai',400054,'Maharashtra',15000);
+insert into CLIENT_MASTER(CLIENTNO,NAME,CITY,PINCODE,STATE,BALDUE) values('C0003','Chhaya Bankar','Mumbai',400057,'Maharashtra',5000);
+ insert into CLIENT_MASTER(CLIENTNO,NAME,CITY,PINCODE,STATE,BALDUE) values('C0004','Ashwini Joshi','Banglore',560001,'Karnataka',0);
+ insert into CLIENT_MASTER(CLIENTNO,NAME,CITY,PINCODE,STATE,BALDUE) values('C0005','Hansel Colaco','Mumbai',400060,'Maharashtra',2000);
+insert into CLIENT_MASTER(CLIENTNO,NAME,CITY,PINCODE,STATE,BALDUE) values('C0006','Deepak Sharma','Manglore',560050,'Karnataka',0);
+
+select * from CLIENT_MASTER;
+
+create table PRODUCT_MASTER(PRODUCTNO varchar2(6) CHECK (PRODUCTNO LIKE 'P%'),DESCRIPTION Varchar2(15) NOT NULL,PROFITPERCENT Number(4) Not Null,UNITMEASURE Varchar2(10) Not Null,QTYONHAND Number(8) Not Null,REORDERLVL Number(8) Not Null
+,SELLPRICE Number(8) Not Null,COSTPRICE Number(8) Not Null,primary key(PRODUCTNO));
+
+ insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P0001','T-Shirts',5,'piece',200,50,350,250);
+ insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P3453','Shirts',6,'piece',150,50,500,350);
+insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P6734','Cotton Jeans',5,'Piece',100,20,600,450);
+ insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P7865','Jeans',5,'Piece',100,20,750,500);
+insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P7868','Trousers',2,'Piece',150,50,850,550);
+ insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P7885','Pull overs',2.5,'Piece',80,30,700,450);
+insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P7965','Denim Shirts',4,'Piece',100,40,350,250);
+insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P7975','Lycra tops',5,'Piece',70,30,300,175);
+insert into PRODUCT_MASTER(PRODUCTNO,DESCRIPTION ,PROFITPERCENT,UNITMEASURE,QTYONHAND,REORDERLVL,SELLPRICE ,COSTPRICE) values('P8865','Skirts',5,'Piece',75,30,450,300);
+
+
+create table SALESMAN_MASTER(SALESMANNO Varchar2(6),CHECK (SALESMANNO LIKE 'S%'),SALESMANNAME Varchar2(20) NOT NULL,ADDRESS1 Varchar2(30) NOT NULL,ADDRESS2 Varchar2(30),CITY Varchar2(20),PINCODE Number(8),STATE Varchar2(20),SALAMT Number(8,2) CHECK (SALAMT<>0) NOT NULL,TGTTOGET Number(6,2) CHECK (TGTTOGET<>0) NOT NULL,YTDSALES Number(6,2) NOT NULL,REMARKS Varchar2(60),primary key(SALESMANNO));
+
+insert into SALESMAN_MASTER(SALESMANNO,SALESMANNAME,ADDRESS1,ADDRESS2,CITY,PINCODE,STATE,SALAMT,TGTTOGET,YTDSALES,REMARKS) values('S0001','Aman','A/14','Worli','mumbai',400002,'maharashtra',3000,100,50,'Good');
+
+1 row created.
+
+SQL> insert into SALESMAN_MASTER(SALESMANNO,SALESMANNAME,ADDRESS1,ADDRESS2,CITY,PINCODE,STATE,SALAMT,TGTTOGET,YTDSALES,REMARKS) values('S0002','omkar','65','nariman','mumbai',400001,'maharashtra',3000,200,100,'Good');
+
+1 row created.
+
+SQL> insert into SALESMAN_MASTER(SALESMANNO,SALESMANNAME,ADDRESS1,ADDRESS2,CITY,PINCODE,STATE,SALAMT,TGTTOGET,YTDSALES,REMARKS) values('S0003','raj','p-7','bandra','mumbai',400032,'maharashtra',3000,200,100,'Good');
+
+1 row created.
+
+SQL> insert into SALESMAN_MASTER(SALESMANNO,SALESMANNAME,ADDRESS1,ADDRESS2,CITY,PINCODE,STATE,SALAMT,TGTTOGET,YTDSALES,REMARKS) values('S0004','ashish','A/5','juhu','mumbai',400044,'maharashtra',3500,200,150,'Good');
+
+1 row created.
+
+create table SALES_ORDER(ORDERNO Varchar2(6) CHECK (ORDERNO LIKE 'O%'),CLIENTNO Varchar2(6),ORDERDATE Date NOT NULL,DELYADDR Varchar2(25),SALESMANNO Varchar2(6),DELYTYPE Char(1),BILLYN Char(1),DELYDATE Date,ORDERSTATUS Varchar2(10),primary key(ORDERNO),foreign key(CLIENTNO) references CLIENT_MASTER(CLIENTNO),foreign key(SALESMANNO) references SALESMAN_MASTER(SALESMANNO));
+insert into SALES_ORDER(ORDERNO,CLIENTNO,ORDERDATE,DELYADDR,SALESMANNO,DELYTYPE,BILLYN,DELYDATE,ORDERSTATUS) values('O1903','C001','03-APR-02','Delhi','S0001','F','Y','07-APR-02','fulfilled');
+
+1 row created.
+
+SQL> insert into SALES_ORDER(ORDERNO,CLIENTNO,ORDERDATE,DELYADDR,SALESMANNO,DELYTYPE,BILLYN,DELYDATE,ORDERSTATUS) values('O4686','C0004','20-May-02','Delhi','S0002','P','N','22-MAY-02','cancelled');
+
+1 row created.
+
+SQL> insert into SALES_ORDER(ORDERNO,CLIENTNO,ORDERDATE,DELYADDR,SALESMANNO,DELYTYPE,BILLYN,DELYDATE,ORDERSTATUS) values('O1908','C0005','24-May-02','Delhi','S0004','F','N','26-jul-02','In process');
+
+
+insert into SALES_ORDER(ORDERNO,CLIENTNO,ORDERDATE,DELYADDR,SALESMANNO,DELYTYPE,BILLYN,DELYDATE,ORDERSTATUS) values('O1901','C001','12-jun-02','Delhi','S0001','F','N','20-jul-02','In process');
+
+
+
+3)a)import mysql.connector
+connection=mysql.connector.connect(host='localhost',
+                                   database='rushi',
+                                   user='root',
+                                   password='Cdac1234')
+
+select_coloumn=""" select * from CLIENT_MASTER where NAME LIKE '_a%';"""
+cursor=connection.cursor()
+b=cursor.execute(select_coloumn)
+print(b)
+cursor.close()
+connection.close()
+
+3)b)import mysql.connector
+connection=mysql.connector.connect(host='localhost',
+                                   database='rushi',
+                                   user='root',
+                                   password='Cdac1234')
+
+select_coloumn=""" select * from CLIENT_MASTER where CITY  LIKE 'M%';"""
+cursor=connection.cursor()
+b=cursor.execute(select_coloumn)
+print(b)
+cursor.close()
+connection.close()
+
+3)c)import mysql.connector
+connection=mysql.connector.connect(host='localhost',
+                                   database='rushi',
+                                   user='root',
+                                   password='Cdac1234')
+
+select_coloumn=""" select NAME  from CLIENT_MASTER where CITY='BANGLORE' OR CITY='Manglore'"""
+cursor=connection.cursor()
+b=cursor.execute(select_coloumn)
+print(b)
+cursor.close()
+connection.close()
+
+3)d)import mysql.connector
+connection=mysql.connector.connect(host='localhost',
+                                   database='rushi',
+                                   user='root',
+                                   password='Cdac1234')
+
+select_coloumn=""" select CLIENT from CLIENT_MASTER where BALDUE>10000 """
+cursor=connection.cursor()
+b=cursor.execute(select_coloumn)
+print(b)
+cursor.close()
+connection.close()
+
+3)E)import mysql.connector
+connection=mysql.connector.connect(host='localhost',
+                                   database='rushi',
+                                   user='root',
+                                   password='Cdac1234')
+
+select_coloumn=""" select * from SALES_ORDER  where to_char(ORDERDATE,'MON')='JUN' """
+cursor=connection.cursor()
+b=cursor.execute(select_coloumn)
+print(b)
+cursor.close()
+connection.close()
+
+
+3)f)import mysql.connector
+connection=mysql.connector.connect(host='localhost',
+                                   database='rushi',
+                                   user='root',
+                                   password='Cdac1234')
+
+select_coloumn=""" select NAME, CITY ,STATE from CLIENT_MASTER  where STATE<>'Maharashtra'  """
+cursor=connection.cursor()
+b=cursor.execute(select_coloumn)
+print(b)
+cursor.close()
+connection.close()
+
+
+
+4)a)import mysql.connector
+connection=mysql.connector.connect(host='localhost',
+                                   database='rushi',
+                                   user='root',
+                                   password='Cdac1234')
+
+select_coloumn=""" select DESCRIPTION,QTYONHAND from PRODUCT_MASTER group by DESCRIPTION     """
+cursor=connection.cursor()
+b=cursor.execute(select_coloumn)
+c=cursor.fetchall()
+print(c)
+for row in c:
+    print("DESCRIPTION=",c[0])
+    print("QTYONHAND =",c[1])
+cursor.close()
+connection.close()
+
+4)b)
+

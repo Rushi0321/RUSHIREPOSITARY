@@ -1,0 +1,100 @@
+Q1: Write a python program to add all the odd numbers from 0 to 20.
+-a=range(0,21)
+ b=list(a)
+ c=b[1:21:2]
+ sum(c)
+ print(sum(c))
+
+Q 2: Write a python program to find the sum of all integers greater than 100 and less than 200.
+-a=range(101,200)
+ list(a)
+ print(sum(a))
+
+Q3: Write a program to display the sum of square of the first ten even natural numbers
+// (2*2+ 4*4 + 6*6 + 8*8 + 10*10 + 12*12 + 14 * 14 + 16 * 16 + 18*18 + 20*20)
+-
+ a=range(0,21,2)
+ b=list(a)
+ print(b)
+ for i in b:
+    i=i*i
+    print(i)
+
+Q4: Write a python program to display ascii characters from 65 to 90
+    for i in range(65,91):
+         print(i,"=",chr(i))
+
+Q5: Display ascii characters from 48 to 57.
+  c=0
+  for i in range(48,58):
+     print(i,"=",c)
+     c=c+1
+
+Q6: Display the following output with the help of Ascii character.
+  for i in range(97,123):
+    b=chr(i)
+    print(i,"=",b)
+
+Q7: Write a python program for given a Python list you should be able to display Python list in
+the following order
+L1 = [100, 200, 300, 400, 500]
+Expected output:
+
+[500, 400, 300, 200, 100]
+-
+L1 = [100, 200, 300, 400, 500]
+print(L1[::-1])
+
+
+Q 14: write a Program to Remove Punctuations from a String provided by the user. [Hint: use
+punctuation attribute of string module to get all punctuations (i.e. !&quot;#$%&amp;\&#39;()*+,-
+./:;&lt;=&gt;?@[\\]^_`{|}~ ) ]
+-punc="!&quot;#$%&amp;\&#39;()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~ ) ]"
+ s=input("enter the string")
+ nonpunc=""
+ for c in s:
+      if c not in punc:
+           nonpunc=nonpunc+c
+ print(nonpunc)
+Q15: Write a python program to print the Following:
+    for i in range(0,3):
+     for l in range(i+1,0,-1):
+         print(l)
+     print()
+
+
+Q16: WAP to print the following asterisk pattern:
+ for i in range(1,6):
+    a="*"
+    a=i*a
+    print(a)
+
+Q17: WAP to create a function traiangle to print the following asterisk triangle pattern:
+    for i in range(1,5):
+        a="*"
+        a=i*a
+        print(a)
+    for j in (3,2,1):
+        b="*"
+        b=j*b
+        print(b)
+    
+
+ Q18: Write a python program to print following multiplication table on the screen  
+for i in range(1,11):
+    if(i==1):
+        print("\t\t",i,end="")
+    else:
+        print("\t",i,end="")
+print("\n","-"*50)
+for l in range(1,11):
+    for j in range(1,11):
+        if(j==1):
+            print(l*j,end="\t|\t")
+            for m in range(1,11):
+                print(m*l,end="\t")
+    print()
+           
+
+
+ 

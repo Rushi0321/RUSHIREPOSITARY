@@ -1,0 +1,36 @@
+1)from datetime import datetime,timedelta
+  print(a=datetime.now())
+  print("a day before week",a-timedelta(weeks=1))
+
+2)from datetime import datetime,timedelta
+  print(a=datetime.now())
+  print("a day before week",a-timedelta(weeks=1))
+  b=a+timedelta(weeks=1 ,hours=12)
+  print(b.strftime("%Y-%m-%d %H:%M:%S"))
+
+3)from datetime import datetime,timedelta
+  print(a=datetime.now())
+  for i in [2,4,6,8,10,12,14,16,18,20]:
+                 c=a+timedelta(weeks=i)
+                 print(c.strftime("%Y-%m-%d"))
+
+
+4)c=datetime(2022,9,21)
+  d=datetime(2022,11,19)
+  print(d-c)
+ 
+5)a=datetime.now()
+ print("1)current date and time",a.strftime("%Y-%m-%d %H:%M:%S"))
+ print("2)current year in full",a.strftime("%Y"))
+ print("3)Month of year full name",a.strftime("%B"))
+ print("4)Weekday of the week",a.strftime("%w"))
+ print("5)Day of year",a.strftime("%A"))
+ print("6)Day of the month",a.strftime("%d")) 
+ print("7)Day of week in full name",a.strftime("%A"))
+
+6)a=datetime(2022,1,1)
+  b=datetime.now()
+  d=(b-a).days
+  print(d)
+
+                 

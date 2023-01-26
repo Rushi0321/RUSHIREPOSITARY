@@ -1,0 +1,31 @@
+1)Computer Vision-Facial acknowledgment,Facelock
+  NLP            -Google Domestic, Alexa and Siri 
+  Information Sciences-Cost comparison websites and arrange foodstuffs online with chatbots.
+  Machine Learning-Faceapps and Snapchat 
+
+2)No, the data collected by various applications is not always ethical in nature. Sometimes, we just share our data to non – trusted third party applications without reading what happens to our data.
+ This may lead to unethical use of our data. If one does not want to share his/her data with anyone, he/she can opt for alternative applications which are of similar usage and keep the data private.
+
+3)The reason behind artificial intelligence is to provide a self sustaining workforce with less human intervention to safe manpower and work exactly like human beings. 
+  AI software in the car is connected to all the sensors and collects input from Google Street View and video cameras inside the car.  
+ autonomous vehicle states that autonomous vehicle should meet a certain condition of the human operator, which requires proof of insurance. It also prohibits the registration of the autonomous vehicles, tested or operated in state until it meets certain conditions.
+
+
+4) a)Gastroenterology(healthcare): AI can play a role in various facets of the field of gastroenterology. Endoscopic exams such as esophagogastroduodenoscopies (EGD) and colonoscopies rely on rapid detection of abnormal tissue. By enhancing these endoscopic procedures with AI, clinicians can more rapidly identify diseases, determine their severity, and visualize blind spots. Early trials in using AI detection systems of early gastric cancer have shown sensitivity close to expert endoscopists.
+   b)Intelligent spraying(Agriculture):We’ve seen that computer vision is good at spotting disorders in agriculture, but it can also help with preventing them.
+   UAVs equipped with computer vision AI make it possible to automate spraying of pesticides or fertilizer uniformly across a field.
+   c)Climate Change(environment):Smart sensors and meters can be deployed within buildings to collect data and monitoring, analyzing, and optimizing energy usage in buildings. 
+
+ 5)Through suggestive selling and what Amazon calls “item-to-item collaborative filtering,” the company harnesses recommendation algorithms to personalize the shopping experience by customer. Through Amazon’s algorithm, the recommendations are produced in real-time 
+  to create high-quality output based on each shopper’s specific interests. The data-driven algorithm bases the recommendations on a user’s purchase history, items they have looked at and not purchased, items they have rated or reviewed, and what other buyers of those same items have viewed and bought. 
+  Item-to-item collaborative filtering allows for scalability over large customer bases and product catalogs, can react immediately to any changes in the shopper’s data, and makes thoughtful recommendations regardless of how many purchases or ratings the shopper has on the platform. 
+
+6)a)crossword puzzle-Partially Observable, stochastic,episodic,static,Discrete,  Single-agent
+  b)chess with clock-Fully Observable,Deterministic,Sequential,Dynamic , Discrete,Multi-agent 
+  c)poker-Partially Observable,Stochastic,Episodic,Dynamic,Continuous,Multi-agent
+  d)back gammon-Fully Observable, Deterministic,Sequential,Dynamic,Discrete,Multi-agent 
+  e)taxi driving-Partially Observable,Stochastic,Episodic, Dynamic,Discrete,Single-agent
+  f)medical diagnosis-Fully Observable, Deterministic,Sequential, Dynamic,Discrete,Single-agent
+  g)image analysis-Fully Observable,Deterministic,Sequential,Static , Discrete,Single-agent
+  h)partpicking robot-Fully Observable,Deterministic,Sequential,static,Discrete,Single-agent
+  i)refinery controller-Fully Observable, Deterministic, Sequential,Static,Discrete,Single-agent

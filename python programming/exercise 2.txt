@@ -1,0 +1,38 @@
+1)a='Myself "Rushikesh"'
+
+2)print("""hello,'CDAC "PGDAI" GROUP'""")
+
+3)a='z'
+  ord(a)
+
+4)  a="abc"
+
+  5*a
+
+
+5)a='-'
+    
+'-'
+50*a
+    
+6)a="cdac"
+ print(a.upper())
+
+7)a="cdac noida"
+  a[0:2]+a[-2:]
+
+8)
+a="restart"
+    
+a[0]+a[1:].replace("r","$")
+
+
+9)a="abc"
+    
+a.replace("ab","de")
+
+b="def"
+    
+b.replace("de","ab")
+    
+  

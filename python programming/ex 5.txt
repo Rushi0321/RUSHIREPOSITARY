@@ -1,0 +1,118 @@
+1)a="abcde"
+b=a[0::2]
+print(b)
+
+2)a="abcde"
+b=a[1:4]
+print(b)
+
+3)a="Rushikesh"
+b="salunkhe"
+c=a[:4]+b+a[4:]
+print(c)
+
+4)a=[10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+b=7000
+c=a[2][2].append(b)
+print(a)
+
+5)a=("orange",[10,20,30],(5,15,25))
+b=a[1][1]
+print(b)
+
+6)b=(50,)
+print(type(b))
+print(b)
+
+7)a=(10, 20, 30, 40)
+print('b',"=",a[0],'c',"=",a[1],'d',"=",a[2],'e',"=",a[3])
+
+
+8)a=(11,22)
+b=(99,88)
+c=list(a)
+d=list(b)
+c[0]=99
+c[1]=88
+d[0]=11
+d[1]=22
+e=tuple(c)
+f=tuple(d)
+print(e)
+print(f)
+print(type(e))
+
+9)a=(11, 22, 33, 44, 55, 66)
+b=a[3:5]
+print(b)
+
+10)a=(11, [22, 33], 44, 55)
+a[1][0]=222
+print(a)
+
+11)a=[3, 6, 9, 12, 15, 18, 21]
+b=[4, 8, 12, 16, 20, 24, 28]
+c=a[1:6:2]
+d=b[0:7:2]
+e=c+d
+print(e)
+
+12)a=[54, 44, 27, 79, 91, 41]
+a.pop(4)
+a.insert(2,91)
+a.append(91)
+print(a)
+
+13)a={1:10,2:20}
+b={3:30,4:40}
+c={5:50,6:60}
+d=a.update(b)
+e=a.update(c)
+print(a)
+
+
+
+
+
+14)a={0: 10, 1: 20}
+a[2]=99
+print(a)
+
+15)a=set(["white","black","red"])
+b=set(["red","green"])
+c=a.difference(b)
+print(c)
+
+
+16))a=[1,2,3,4,5,6,7,8,9,10]
+b=[1,2,3,4,5,6,7,8,9,10]
+c=list(map(lambda x,y:x*y,a,b))
+print(c)
+
+
+17)a="Rushikesh"
+b=a.lower()
+print(b)
+d=0
+c=["a","e","i","o","u"]
+for i in b:
+    if i in c:
+        d=d+1
+
+    print("no of vowels",d)
+
+18)
+a={
+    "class":{
+     "student":{
+               "name":"mike",
+               "marks":{
+                   "physics":70,
+                   "history":80
+               }
+     }
+    }
+
+   }
+print(a)
+print(a['class']['student']['marks']['history'])

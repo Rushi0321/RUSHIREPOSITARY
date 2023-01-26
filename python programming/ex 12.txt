@@ -1,0 +1,131 @@
+1)
+try:
+    a=5
+    b=0
+    c=a/b
+  
+
+except:
+    print("Division is n ot possible since denom is 0")
+
+2)try:
+    a=[5,44,3,2,1]
+    a[7]
+  
+
+  except IndexError as ex:
+     print(ex,"index are upto 4")
+
+3)import sys
+c=[45,12,34,52]
+try:
+    c[7]
+    b=rushi55
+    a=10/0
+    
+
+except (IndexError,NameError,ZeroDivisionError):
+    for i in [0,1,2]:
+        print(sys.exc_info()[i])
+        print("error",i)
+
+4)try:
+    a=21/7
+
+except:
+    print("a cant be divided by 0")
+
+else:
+    print(a)
+
+
+
+
+
+5)try:
+    a=39
+    if a<=40:
+        raise ValueError("your son failed to pass by 1 mark")
+
+except ValueError as ve:
+    print(ve,"error")
+
+6)class error(Exception):
+    pass
+
+class ValueDividedBy2(Exception):
+    print("even value")
+
+class ValueNotDividedBy2(Exception):
+    print("odd number")
+
+n=int(input("enter a number"))
+
+while True:
+    try:
+        i=2
+        if n%i==0:
+            raise ValueDividedBy2
+        else:
+            raise ValueNotDividedBy2
+        break
+    except ValueDividedBy2:
+        print(n,"is even number")
+        break
+
+    except ValueNotDividedBy2:
+        print(n,"is odd number")
+
+
+print("congrats")
+
+
+7)import sys
+e=[1,2,3,4,5]
+try:
+    b=34/0
+    a=cdac
+    e[111]
+    if a!=str(a):
+        raise NameError("A IS NOT STRING")
+
+
+except NameError as ne:
+    print(sys.exc_info()[0],"a is not string")
+
+except ZeroDivisionError as ze:
+    print(sys.exc_info()[1],"cant divide by zero")
+
+except IndexError as ie:
+    print(sys.exc_info()[2],"index out of range") 
+
+8)a=open("rushi.txt","r+")
+a.writelines("hello, everyone,wakanda forever")
+a.seek(0)
+a.readlines()
+
+
+
+
+9)try:
+    a=int(input("enter a number"))
+    if a<=0:
+        raise ValueError("x should be higher than 1")
+    else:
+        pass
+        
+
+except ValueError as ve:
+    print(ve)
+
+10)try:
+    a=10
+    b="2"
+    if a!=b:
+    
+        raise TypeError("b is not int")
+  except TypeError as te:
+     print(te)
+
+
+

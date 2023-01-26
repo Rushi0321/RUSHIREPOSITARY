@@ -1,0 +1,49 @@
+1)a=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\new.txt","r")
+ print(a.read())
+
+2)n=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+
+
+n.seek(0)
+g=n.readlines()
+e=int(input("enter a number"))
+b=int(input("enter a number"))
+print(g[e:b])
+
+3)d=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\new.txt","a+")
+d.write("\n"+str("PGDAI 2022 BATCH"))
+d.seek(0)
+print(d.read())
+
+4)b=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+      
+a=[]
+      
+for i in b:
+      a.append(i)
+      print(a)
+
+
+5)n=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+n.seek(0)
+b=n.readlines()
+for m in b[::-1]:
+    print(m)
+n.close()
+
+6)w=[1,2,3,4,5]
+n=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+g=n.readlines()
+for i in w:
+    g.append(i)
+    print(g)
+n.close()
+
+7)n=open(r"C:\Users\91916\OneDrive\Desktop\CDAC\python programming\New.txt","r")
+a=n.readlines()
+print(len(a))
+print(len(a[0]+a[1]+a[2]+a[3]))
+print(1+len(a[1].split())+len(a[2].split())+len(a[3].split()))
+n.close()
+
+

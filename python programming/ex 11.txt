@@ -1,0 +1,79 @@
+1) class bank_account:
+    def display_name_and_balance(self):
+        self.a=str(input("enter your full name"))
+        self.b=50000
+        self.c=int(input("enter your account number"))
+        print("name","=",self.a,"balance","=",self.b,"account number","=",self.c)
+
+    def deposit_a_amount(self):
+        self.d=int(input("enter amount you want to deposit"))
+        print("deposit","=",self.d)
+
+    def amount_to_withdraw(self):
+        self.e=int(input("enter amount you want to withdraw"))
+        print("withdrawn amount","=",self.e)
+
+    def balance_amount(self):
+        self.f=self.b-self.e
+        print("balance","=",self.f)
+
+        print("exit")
+
+2) class person:
+    def __init__(self):
+        self.a=str(input("enter a name"))
+        self.b=int(input("enter a code"))
+        print(self.a, self.b)
+
+  class account(person):
+    def member_pay(self):
+        self.c=int(input('enter amount of pay'))
+        print(self.c)
+
+  class admin(person):
+    def experience(self):
+        self.d=int(input("enter a experience of work"))
+        print(self.d)
+
+  class employee(account,admin):
+    print("employee detail")
+
+3)class staff:
+    def __init__(self):
+        self.a=str(input("enter your name"))
+        self.b=int(input("enter code"))
+        print(self.a,self.b)
+
+class teacher(staff):
+    def subject(self):
+        self.c=str(input("enter a subject"))
+        print(self.c)
+
+    def publication(self):
+        self.d=str(input("enter a publication"))
+        print(self.d)
+
+class typist(staff):
+    def speed(self):
+        self.e=int(input("enter your typing speed from 30 to 60 wpm"))
+        print(self.e)
+
+class regular(typist):
+    def salary(self):
+        self.f=int(input("enter your salary"))
+        print(self.f)
+
+class causual(typist):
+    def daily_wages(self):
+        self.g=int(input("enter a no of hr you work"))
+        self.h=int(input("enter hourly wages"))
+        self.i=self.g*self.h
+        print(self.i)
+
+class officer(staff):
+    def grade(self):
+        self.m=int(input("enter your security grade"))
+        print(self.m)
+        print("EXIT")
+        
+

@@ -1,0 +1,30 @@
+1)a=str(input("enter a phrase"))
+  b=""
+ for i in range(len(a)):
+     if a[i].isalpha():
+         b +=a[i]
+ if b[::1]==b[::-1]:
+     print("phrase is palindrome")
+ else:
+     print("phrase is not palindrome")
+
+
+3)people={'Arham':'Blue','Lisa':'Yellow','Vinod':'Purple','Jenny':'Pink'}
+  a)a=list(people.keys())
+   print(a)
+   ['Arham', 'Lisa', 'Vinod', 'Jenny']
+   print(len(a))
+   4=no of students
+  b)people['Lisa']='Blue'
+    people
+    {'Arham': 'Blue', 'Lisa': 'Blue', 'Vinod': 'Purple', 'Jenny': 'Pink'}
+  c)people.pop('Jenny')
+    'Pink'
+    people
+   {'Arham': 'Blue', 'Lisa': 'Blue', 'Vinod': 'Purple'}
+  d)print(sorted(people))
+    ['Arham', 'Jenny', 'Lisa', 'Vinod']
+    sorted(people.values())
+    ['Blue', 'Pink', 'Purple', 'Yellow']
+   
+

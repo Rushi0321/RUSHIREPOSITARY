@@ -1,0 +1,74 @@
+1)a=(12,21,34,52)
+  sum(a)
+
+2)a=(12,21,34,52)
+  max(a)
+
+3)a=(12,21,34,52)
+min(a)
+
+4)a=("Red","green","white","black")
+a[0]
+a[3]
+
+5]a"sew"
+ if(len(a)>=3):
+    print("condition matched")
+    if(a[-3:]=="ing"):
+        a+"ly"
+        print(a)
+    else:
+        a+"ing"
+
+
+6)a=int(input("enter students mark"))
+if(a>=60):
+    print("you are in 1st div")
+elif(a>50):
+    if(a<=59):
+        print("you are in 2nd division")
+elif(a>40):
+    if(a<=49):
+        print("you are in 3rd division")
+else:
+    print("you have failed the test")
+
+7)a=int(input("enter a number"))
+  b=int(input("enter a number"))
+  c=int(input("enter a number"))
+  if(c>b):
+      print("c is greater than b")
+      if(c>a):
+          print("c is greater among three numbers")
+
+
+8)a=int(input("enter a year"))
+if(a%4==0):
+    print(a," is leap year")
+
+
+9)a="Rushikesh"
+if(a[::1]==a[::-1]):
+    print("a is palindrome")
+else:
+    print("a is not palindrome")
+
+10)a="efgh cdba"
+   b=a.split()
+   sorted(b)
+   print(b)
+
+11)a=["a","b",["c",["d","e",["f","g"],"l"],"m","n"]]
+   b=["h","i","j"]
+    a[2][1][2].extend(b)
+print(a)
+
+
+
+12)a=[5, 10, 15, 20, 25, 50, 20]
+  a.count(20)
+  a.index(20)
+  a[3]=200  
+  print(a)
+
+
